@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
+body {
+  font-family: 'Oxanium';
+}
+
+body .container-fluid {
+  position: relative;
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(70%, black), color-stop(80%, #030f24));
+  background: linear-gradient(to top right, black 70%, #030f24 80%);
+  /*  #intro {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    } */
+}
+
+body .container-fluid .video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+body .container-fluid #intro {
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 0 5px 5px #000;
+          box-shadow: 0 0 5px 5px #000;
+}
+
+body .container-fluid .text-content {
+  position: absolute;
+  top: 64%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .container-fluid #hi-tech {
+  display: none;
+}
+
+body .container-fluid #visit-btn {
+  display: none;
+}
+
+body marquee {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  font-family: 'Oxanium';
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  body #hi-tech {
+    font-size: 1rem;
+  }
+  body .text-content {
+    top: 52% !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
