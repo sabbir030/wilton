@@ -1,6 +1,6 @@
 //Loader Animation
 /* $(window).on("load", function() {
-  let loading = document.querySelector(".loading");
+   let loading = document.querySelector(".loading");
   let letters = loading.textContent.split("");
   loading.textContent = "";
   letters.forEach((letter, i) => {
@@ -14,8 +14,7 @@
     .fadeIn(3000)
     .delay(3500)
     .fadeOut("slow");
-});
- */
+}); */
 
 //init WOW
 new WOW().init();
@@ -27,7 +26,12 @@ setTimeout(function() {
   console.log("wilton hi-tech park");
 }, 5000);
 
-setTimeout(function() {
-  document.getElementById("visit-btn").style.display = "block";
+/* setTimeout(function() {
+  document.getElementById("visit-btn").style.opacity = "1";
   console.log("Visit Website");
 }, 7000);
+ */
+$("#visit-btn")
+  .fadeIn(9000)
+  .delay(25000)
+  .fadeIn("slow");

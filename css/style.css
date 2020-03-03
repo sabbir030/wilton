@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
+.bg-custom {
+  background: -webkit-gradient(linear, left top, right bottom, from(#368cc6), to(#3149a0)) !important;
+  background: linear-gradient(to bottom right, #368cc6, #3149a0) !important;
+  color: white;
+}
+
 body {
   font-family: 'Oxanium';
+}
+
+body .loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 body .container-fluid {
@@ -15,39 +29,47 @@ body .container-fluid {
         min-width: 100%;
         min-height: 100%;
     } */
+  /*  .video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+ */
 }
 
-body .container-fluid .video-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
+body .container-fluid .video-boundary {
+  overflow: hidden;
 }
 
 body .container-fluid #intro {
   width: 100%;
+  max-width: 100%;
   height: auto;
   -webkit-box-shadow: 0 0 5px 5px #000;
           box-shadow: 0 0 5px 5px #000;
 }
 
 body .container-fluid .text-content {
+  /*  position: absolute;
+            top: 64%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
   position: absolute;
-  top: 64%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 55%;
+  z-index: 2;
 }
 
-body .container-fluid #hi-tech {
+body #hi-tech {
   display: none;
 }
 
-body .container-fluid #visit-btn {
+body #visit-btn {
   display: none;
+  z-index: 3;
 }
 
-body marquee {
+marquee {
   position: absolute;
   bottom: 5px;
   width: 100%;
@@ -56,11 +78,22 @@ body marquee {
 }
 
 @media (max-width: 500px) {
-  body #hi-tech {
+  .video-boundary {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: 1;
+  }
+  #hi-tech {
     font-size: 1rem;
   }
-  body .text-content {
-    top: 52% !important;
+  .text-content {
+    top: 40% !important;
+  }
+  #visit-btn {
+    position: absolute;
+    top: 50%;
+    padding: .5rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

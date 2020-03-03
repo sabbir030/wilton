@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Oxanium&display=swap');
 
+.bg-custom {
+    background: linear-gradient(to bottom right, rgb(54, 140, 198), rgb(49, 73, 160)) !important;
+    ;
+    color: white;
+}
+
 // My CSS
 body {
     font-family: 'Oxanium';
+
+    .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
 
     .container-fluid {
         position: relative;
@@ -16,51 +30,73 @@ body {
         min-width: 100%;
         min-height: 100%;
     } */
-        .video-container {
+        /*  .video-container {
             position: relative;
             width: 100%;
             height: 100%;
             display: inline-block;
         }
+ */
+        .video-boundary {
+            overflow: hidden;
+        }
 
         #intro {
             width: 100%;
+            max-width: 100%;
             height: auto;
             box-shadow: 0 0 5px 5px #000;
         }
 
         .text-content {
-            position: absolute;
+            /*  position: absolute;
             top: 64%;
             left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        #hi-tech {
-            display: none;
-        }
-
-        #visit-btn {
-            display: none;
+            transform: translate(-50%, -50%); */
+            position: absolute;
+            top: 55%;
+            z-index: 2;
         }
     }
 
-    marquee {
+    #hi-tech {
+        display: none;
+    }
+
+    #visit-btn {
+        display: none;
+        z-index: 3;
+    }
+}
+
+marquee {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    font-family: 'Oxanium';
+    font-size: 2rem;
+}
+
+@media(max-width: 500px) {
+    .video-boundary {
         position: absolute;
-        bottom: 5px;
-        width: 100%;
-        font-family: 'Oxanium';
-        font-size: 2rem;
+        top: 15%;
+        left: 0;
+        z-index: 1;
     }
 
-    @media(max-width: 500px) {
-        #hi-tech {
-            font-size: 1rem;
-        }
+    #hi-tech {
 
-        .text-content {
-            top: 52% !important;
-        }
+        font-size: 1rem;
     }
 
+    .text-content {
+        top: 40% !important;
+    }
+
+    #visit-btn {
+        position: absolute;
+        top: 50%;
+        padding: .5rem !important;
+    }
 }
